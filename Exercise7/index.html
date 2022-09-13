@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Exercise 7</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <!--Create an input with ID name-input which uses the format of a text box, has "Enter your name" as a placeholder until the user enters their own text.-->
+    <input id="name-input" type="text" placeholder="Enter your name" />
+    <!--Create a button with ID my-button with text "Click Me" on it-->
+    <button id="my-button">Click Me</button>
+
+    <!--Start of embedded javascript-->
+    <script>
+        // Create a variable which points to the button we made as its value
+        var myButton = document.querySelector('#my-button');
+        // Create a variable which points to the text box as its value
+        var nameInput = document.querySelector('#name-input');
+
+        // "Listen" for if the button has been clicked, if it has then continue through
+        myButton.addEventListener('click', function () {
+            // Check if the user has entered text into the text box
+            if (nameInput.value !== '') {
+                // Bring up a dialog box stating "Hello " followed by the information entered by the user.
+                alert('Hello ' + nameInput.value);
+            }
+        });
+        // End of script
+    </script>
+</body>
+
+</html>
